@@ -1,13 +1,14 @@
+---
 name: Increment Git Tag
-description: Increment git tag based on the provided version type
+description: Increments git tag based on the provided version type
 inputs:
   version-type:
-    decription: Provide Version Type (major, minor, patch)
+    description: Provide version type [major, minor, patch]
     required: true
     default: patch
 outputs:
   new-version:
-    decription: Incremented version based on the provided version type
+    description: Incremented version based on the input
 runs:
   using: node16
   main: action/index.js
