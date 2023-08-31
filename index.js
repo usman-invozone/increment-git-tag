@@ -6,7 +6,8 @@ async function run() {
         const versionType = core.getInput('version-type');
         const src = __dirname;
 
-        await exec.exec(`${src}/git_update.sh -v ${versionType}`)
+        core.setOutput('new-version', 'this is testing')
+        // await exec.exec(`${src}/git_update.sh -v ${versionType}`)
     } catch(err) {
         core.setFailed(err.message);
     }
